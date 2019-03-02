@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1551520530 source:f:\acalgorithm\main.cpp
+	<iostream>
+	<bits/stdc++.h>
+	<list>
+	<Aho.h>
+	<vector>
+
+1551520277 f:\acalgorithm\include\aho.h
+	<bits/stdc++.h>
+	<string>
+	<list>
+	<Vertex.h>
+	<queue>
+
+1551520246 f:\acalgorithm\include\vertex.h
+	<bits/stdc++.h>
+	<map>
+
+1551447034 source:f:\acalgorithm\src\vertex.cpp
+	"Vertex.h"
+
+1551520551 source:f:\acalgorithm\src\aho.cpp
+	"Aho.h"
+
