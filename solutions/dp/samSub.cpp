@@ -12,7 +12,6 @@ for(int i = n.size()-1; i >= 0; i--){
     int a = n[i] - '0';
     sum = (sum + a*j*(i+1))%1000000007;
     j = ((j*10)+1)%1000000007;
-        //cout<<" a "<< a<< " v " << v<< " s " << s<<endl;
 }
 return sum;
 }
