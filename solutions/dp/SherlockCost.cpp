@@ -18,7 +18,6 @@ int cost(vector<int> B) {
         int temph = max(h+hh, l+lh);
         l = templ;
         h = temph;
-      //  cout<< "("<<i<<","<<i-1<<")"<<" LH= "<< lh << "hl = "<< hl<< "l=" << l<< "h= "<<h<<endl;
 
     }
 
