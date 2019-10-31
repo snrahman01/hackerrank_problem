@@ -12,7 +12,6 @@ vector<string> split(const string &);
  * The function is expected to return a LONG_INTEGER.
  * The function accepts INTEGER_ARRAY prices as parameter.
  */
- //vector<int> prices;
  long maxProfit = 0;
  void getProfit(int day, int profit, int items, vector<int> prices){
     if(day == prices.size()){
@@ -31,19 +30,12 @@ vector<string> split(const string &);
 
      getProfit(day+1, profit-prices[day], items+1, prices);
      maxProfit = maxProfit<(profit-prices[day])?(profit-prices[day]):maxProfit;
-     //maxProfit = maxProfit<(profit-prices[day]) ? (profit-prices[day]) : maxProfit;
      getProfit(day+1, profit, items, prices);
      maxProfit = maxProfit<profit?profit:maxProfit;
 
  }
 
 long stockmax(vector<int> prices) {
-
-   /* for(int i = 0; i < pri.size(); i++){
-        prices.push_back(pri[i]);
-    }*/
-
-   // getProfit(0, 0, 0, pri);
 
    long profit = 0;
         int maxSoFar = 0;
@@ -55,13 +47,11 @@ long stockmax(vector<int> prices) {
             cout<<profit<<endl;
         }
         return profit;
-   // return maxProfit;
 }
 
 int main(){
 
     vector<int> pr = {1, 2, 100};
-     //vector<int> pr = {1, 3, 1, 2};
-     cout<< stockmax(pr);
-return 0;
+    cout<< stockmax(pr);
+    return 0;
 }
