@@ -3,7 +3,7 @@
 using namespace std;
 
 vector<string> split_string(string);
-    long long dp[1001][8192] ={0};
+long long dp[1001][8192] ={0};
 vector<int> make_prime()
 {
   bool prime[8192];
@@ -28,18 +28,14 @@ vector<int> make_prime()
 
 // Complete the primeXor function below.
 int primeXor(vector<int> a) {
-//cout<<"5";
-    //cout<<"1";
+
     int freq[1001] = {0};
     dp[0][0] = 1;
 
-   // cout<<"x";
     for(int i = 0; i < a.size(); i++){
-            //cout<< a[i]<<endl;
         freq[a[i] - 3500]++;
     }
 
-    //cout<<"f"<<endl;
     for(int i = 1;i < 1001; i++){
         for(int j = 0; j < 8192; j++){
             dp[i][j] = (dp[i-1][j]*(1+(freq[i-1]/2)) + dp[i-1][j^((i-1)+3500)]*((1+freq[i-1])/2))%1000000007;
@@ -48,7 +44,6 @@ int primeXor(vector<int> a) {
 
     long long subCount = 0;
 
-   // cout<<"h"<<endl;
     vector<int> P = make_prime();
     for(int i = 0; i < P.size(); i++){
         subCount =  (subCount+dp[1000][P[i]])%1000000007;
