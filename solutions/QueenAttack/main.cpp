@@ -60,48 +60,21 @@ int queensAttack(int n, int k, int r_q, int c_q, vector<vector<int>> obstacles) 
     int totalDis = 0;
 
     for(int i = 0; i < dis.size(); i++){
-          //  cout << dis[i] << " ";
         totalDis += dis[i];
     }
 
 
-    //cout<<endl;
     return totalDis;
 }
 
 int main()
 {
-    /*ofstream fout(getenv("OUTPUT_PATH"));
-
-    string nk_temp;
-    getline(cin, nk_temp);
-
-    vector<string> nk = split_string(nk_temp);*/
-
-    int n = 5;//stoi(nk[0]);
-
-    int k = 3;//stoi(nk[1]);
-
-    /*string r_qC_q_temp;
-    getline(cin, r_qC_q_temp);
-
-    vector<string> r_qC_q = split_string(r_qC_q_temp);*/
-
-    int r_q = 4;// stoi(r_qC_q[0]);
-
-    int c_q = 3;// stoi(r_qC_q[1]);
+    int n = 5;
+    int k = 3;
+    int r_q = 4;
+    int c_q = 3;
 
     vector<vector<int>> obstacles(k);
-    /*for (int i = 0; i < k; i++) {
-        obstacles[i].resize(2);
-
-        for (int j = 0; j < 2; j++) {
-            cin >> obstacles[i][j];
-        }
-        obstacles[i][0] = 5;
-
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
-    }*/
     obstacles[0] = {5, 5};
     obstacles[1] = {4, 2};
     obstacles[2] = {2, 3};
@@ -109,9 +82,6 @@ int main()
     int result = queensAttack(n, k, r_q, c_q, obstacles);
 
     cout << result << "\n";
-
-    //fout.close();
-
     return 0;
 }
 
